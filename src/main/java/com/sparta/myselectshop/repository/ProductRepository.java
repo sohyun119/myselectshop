@@ -29,8 +29,11 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     * where
     *   p.user_id = 1
     * and
-    *   pf.folder_id = 3;
+    *   pf.folder_id = 3
+    * order by p.id desc
+    * limit 20, 10; // 페이징 처리 <- jpa가 많은 것을 도와주고 있는 걸 알 수 있음
     *
+    * //    ㄴ 20은 3번째 페이징을 뜻함
     * */
 
 }
